@@ -1,0 +1,217 @@
+.node{
+    background: rgb(255, 255, 255);
+    height: 25px;
+    width: 25px;
+    display: inline-block;
+    outline: 0.5px solid rgb(46, 46, 46);
+    padding: 0;
+
+}
+.node-cur{
+    background: rgb(1, 0, 0);
+}
+
+.node-weight {
+    background-image: url('Images/kettlebell.png');
+    background-size: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.node-weight-visited{
+    animation: visitedAnimationWeights;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+.node-wall{
+    animation-name: becomeWall;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    outline: none;
+    
+}
+
+.node-start{
+    background-image: url("Images/umbreon.png");
+    background-size: 25px;
+}
+
+.node-finish{
+    background-image: url("Images/espeon.png");
+    background-size: 25px;
+}
+
+.node-being-processed{
+    background: rgb(247, 243, 4);
+    transition: background 0.2s;
+}
+
+.node-being-processed2 {
+    background: rgb(106, 106, 97);
+    transition: background 0.2s;
+}
+
+.node-visited {
+    animation-name: visitedAnimation;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction:normal;
+    animation-iteration-count: 1;
+    animation-fill-mode:forwards;
+    animation-play-state:running;
+}
+
+@keyframes visitedAnimation {
+    0% {
+        transform: scale(0.1);
+        background-color: rgb(172, 138, 138);
+        border-radius: 100%;
+    }
+
+    50% {
+        transform: scale(0.9);
+        background-color: rgb(119, 119, 119)
+    }
+
+    75% {
+        transform: scale(1.20);
+        transform: rotate(90);
+        background-color: rgb(77, 77, 77)
+    }
+
+    100% {
+        transform: scale(1);
+        background-color: rgb(34, 34, 34)
+    }
+}
+
+.node-shortest-path-cur{
+    background-image: url('Images/umbreon.png');
+    background-size: 25px;
+}
+.node-shortest-path {
+    animation-name: shortestPath;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+.node-shortest-path-weight {
+    animation-name: shortestPathWeight;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+@keyframes shortestPath {
+    0% {
+        transform: scale(0.6);
+        background-color: rgb(95, 195, 158);
+    }
+
+    50% {
+        transform: scale(1.2);
+        background-color: rgb(42, 186, 133);
+    }
+
+    100% {
+        transform: scale(1);
+        background-color: rgb(74, 204, 157);
+    }
+}
+
+@keyframes shortestPathWeight {
+    0% {
+        transform: scale(0.6);
+        background-color: rgb(245, 192, 243);
+        background-image: url('Images/kettlebell.png');
+        background-size: 9px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    50% {
+        transform: scale(1.2);
+        background-color: rgb(245, 192, 243);
+        background-image: url('Images/kettlebell.png');
+        background-size: 15px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    100% {
+        transform: scale(1);
+        background-color: rgb(245, 192, 243);
+        background-image: url('Images/kettlebell.png');
+        background-size: 18px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+@keyframes becomeWall {
+    0%{
+        transform: scale(0.5);
+        background: rgb(149, 150, 149);
+    }
+
+    50%{
+        transform: scale(1.1);
+        background: rgb(73, 73, 73);
+    }
+
+    100%{
+        transform: scale(1);
+        background-color: rgba(143, 143, 143, 0.679);
+        outline: 0.5px solid rgb(0, 0, 0);
+        
+    }
+}
+
+@keyframes visitedAnimationWeights {
+    0% {
+        transform: scale(0.1);
+        background-color: rgb(62, 180, 137);
+        border-radius: 100%;
+    }
+
+    50% {
+        transform: scale(0.9);
+        background-color: rgb(62, 180, 137)
+    }
+
+    75% {
+        transform: scale(1.20);
+        transform: rotate(90);
+        background-color: rgb(62, 180, 137)
+    }
+
+    100% {
+        transform: scale(1);
+        background-color: rgb(62, 180, 137);
+        background-image: url('Images/kettlebell.png');
+        background-size: 18px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}

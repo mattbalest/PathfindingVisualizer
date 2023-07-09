@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap');
+.help-btn{
+    position: absolute;
+    left: 90%;
+    top: 2.5%;
+    border: none;
+    width: fit-content;
+    height: 60px;
+    font-size: 25px;
+    color: white;
+    background-color: rgb(34, 34, 34);
+    font-family: 'ubuntu', sans-serif;
+}
+
+.help-btn:hover{
+    cursor: pointer;
+    color: rgb(62, 180, 137);
+}
+
+.tutorial{
+    width: 50%;
+    height: 70%;
+    background-color: rgb(34, 34, 34);
+    border: 5px solid rgb(26, 211, 164);
+    position: absolute;
+    top: 53%;
+    left: 25%;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+h2{
+    font-size: 25px;
+    margin-top: 10px;
+    position: relative;
+    left: -37%;
+    margin-bottom: 0;
+    color: white;
+}
+p{
+    display: block;
+    position: relative;
+    color: rgb(26, 211, 164);
+    font-size: 18px;
+    margin-right: 10px;
+    margin-left: 40px;
+    margin-top: 10px;
+  
+}
+
+.close-btn{
+    border: none;
+    width: fit-content;
+    height: 20px;
+    background-color: rgb(26, 211, 164);
+    color: white;
+}
+
+.close-btn:hover{
+    cursor: pointer;
+    background-color: rgb(15, 117, 91);
+}
